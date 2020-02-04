@@ -2,12 +2,14 @@
  * @Description:
  * @Author: Hexon
  * @Date: 2019-10-30 14:59:31
- * @LastEditors: Hexon
- * @LastEditTime: 2019-12-10 14:16:29
+ * @LastEditors  : Hexon
+ * @LastEditTime : 2020-02-04 20:59:53
  */
 import { AxiosRequestConfig, AxiosResponse } from 'axios'
 import { getToken } from '@utils/auth'
-import { Toast } from 'antd-mobile'
+
+import { message } from 'antd'
+
 export const requestSuccessFunc = (config: AxiosRequestConfig) => {
   if (getToken()) {
     config.headers['token'] = getToken()
@@ -48,7 +50,7 @@ export function responseSuccessFunc(response: AxiosResponse) {
       // 出现该错误，则在控制台打印错误信息
       console.error('系统发生异常，请联系管理员')
     }
-    Toast.fail(res.message)
+    message.error(res.message)
     // if (res.msg) {
     //   // 将后台接口的msg字段转为message字段传给前端，兼容 new Error('message string') 的写法
     //   res.message = res.msg
@@ -71,6 +73,6 @@ export function responseFailFunc(error: any) {
   } else {
     message = error.message
   }
-  Toast.fail(message)
+  error.fail(message)
   return Promise.reject(error)
 }
