@@ -1,16 +1,21 @@
 import React, { Component } from 'react'
-import { HashRouter, Switch, Redirect } from 'react-router-dom'
+import { HashRouter, Switch, Redirect, Route } from 'react-router-dom'
 
+// import EmptyLayout from '@layouts/empty-layout'
 import MainLayout from '@layouts/main-layout'
 import routes from './routes'
 import AuthorizedRoute from '@/components/authWrapper/authorizedRoute'
+import Login from '@/containers/login'
 
 export default class RouteConfig extends Component<{}> {
   public render() {
     return (
       <HashRouter>
-        <MainLayout>
-          <Switch>
+        <Switch>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <MainLayout>
             <Redirect from="/" to="/activity-photo" exact />
             {routes.map((rc) => {
               const { path, component, auth = '', redirectPath = '/no-auth', ...rest } = rc
@@ -28,8 +33,8 @@ export default class RouteConfig extends Component<{}> {
                 />
               )
             })}
-          </Switch>
-        </MainLayout>
+          </MainLayout>
+        </Switch>
       </HashRouter>
     )
   }
