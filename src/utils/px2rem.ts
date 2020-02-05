@@ -10,9 +10,10 @@
  * @param {number}rootValue: 这个值需要根据设计稿
  * @return:
  */
-const px2rem = (px: string, rootValue = 32) => {
+
+const px2rem = (px: string, rootValue = 23) => {
   try {
-    return parseFloat(px) / rootValue + 'rem'
+    return parseFloat(px) /rootValue   + 'rem'
   } catch (e) {
     console.error(e.message)
   }
