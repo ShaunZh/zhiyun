@@ -4,7 +4,6 @@ import { Button } from 'antd'
 const Login = () => {
   return (
     <div>
-      {' '}
       <Button type="primary">Primary</Button>
       <Button>Default</Button>
       <Button type="dashed">Dashed</Button>
