@@ -8,15 +8,7 @@ import LeftBox from './components/leftImg'
 import LogoImg from './components/logoImg'
 import InputAreas from './components/inputArea'
 
-// const Login = () => {
-//   return (
-//     <div>
 
-//       <Button type="primary">登录按钮</Button>
-
-//     </div>
-//   )
-// }
 class Login extends React.Component<{}, {}> {
   public render() {
     return (
@@ -39,6 +31,7 @@ class Login extends React.Component<{}, {}> {
       </div>
     )
   }
-}
+
+
 
 export default Login
