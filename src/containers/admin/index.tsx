@@ -1,5 +1,6 @@
 import { Table, Divider, Tag } from 'antd'
 import * as React from 'react'
+import Edit from '@/assets/images/icon-edit.png'
 const columns = [
     {
       title: 'No.',
@@ -40,7 +41,8 @@ const columns = [
     {
       title: '操作',
       key: 'operators',
-      dataIndex: 'operators'
+      dataIndex: 'operators',
+      render:(params:string)=><img src={params}></img>
     }
   ]
   const data = [
@@ -53,7 +55,7 @@ const columns = [
       role: 'admin',
       status: 'yes',
       time: '2018.1.1',
-      operators: 'shanchu xiugai'
+      operators: Edit
     },
     {
       key: '2',
@@ -64,7 +66,7 @@ const columns = [
       role: 'admin',
       status: 'yes',
       time: '2018.1.1',
-      operators: 'shanchu xiugai'
+      operators: Edit
     },
     {
       key: '3',
@@ -75,7 +77,7 @@ const columns = [
       role: 'admin',
       status: 'yes',
       time: '2018.1.1',
-      operators: 'shanchu xiugai'
+      operators: Edit
     },
     {
       key: '4',
@@ -86,7 +88,7 @@ const columns = [
       role: 'admin',
       status: 'yes',
       time: '2018.1.1',
-      operators: 'shanchu xiugai'
+      operators: Edit
     },
     {
       key: '5',
@@ -97,7 +99,7 @@ const columns = [
       role: 'admin',
       status: 'yes',
       time: '2018.1.1',
-      operators: 'shanchu xiugai'
+      operators: Edit
     },
     {
       key: '6',
@@ -108,7 +110,7 @@ const columns = [
       role: 'admin',
       status: 'yes',
       time: '2018.1.1',
-      operators: 'shanchu xiugai'
+      operators: Edit
     }
   ]
   export default class Admin extends React.Component<{}, {}>{
