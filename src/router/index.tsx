@@ -6,7 +6,7 @@ import MainLayout from '@layouts/main-layout'
 import routes from './routes'
 import AuthorizedRoute from '@/components/authWrapper/authorizedRoute'
 import Login from '@/containers/login'
-
+import SideMenu from '@/containers/sidemenu'
 export default class RouteConfig extends Component<{}> {
   public render() {
     return (
@@ -14,6 +14,9 @@ export default class RouteConfig extends Component<{}> {
         <Switch>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/sidemenu">
+            <SideMenu />
           </Route>
           <MainLayout>
             <Redirect from="/" to="/activity-photo" exact />
