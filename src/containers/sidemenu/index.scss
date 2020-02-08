@@ -1,12 +1,10 @@
 .bottomLeft {
-    // display:inline-block;
     width: 171px;
     height: 100%;
     background: rgba(36, 43, 57, 1)
 }
 
 .bottomRight {
-    // display:inline-block;
     width: 1195px;
     height: 100%;
     background-color: #f6f6f6;
@@ -31,24 +29,24 @@
 
 .topBox {
     height: 50px;
-    display: flex
+    display: flex;
+    position:relative
 }
 
 .topLeft {
-    width: 171px !important;
+    width: 169px;
     height: 50px;
     background: rgba(44, 166, 224, 1) !important;
 }
 
 .topRight {
-    width: 1195px;
-    height: 100%
+    height: 100%;
 }
 
 .logoBox {
     width: 60px;
     height: 21px;
-    margin: 14px 0 0 11px;
+    margin: 18px 0 0 11px;
 }
 
 .logo {
@@ -92,8 +90,9 @@
 }
 
 .breadRight {
-    float: right;
-    margin: 10px 14px 0 0;
+    position: absolute;
+    right:36px;
+    top:10px;
 
     >span {
         display: inline-block;
@@ -106,47 +105,6 @@
     }
 }
 
-.title {
-    text-align: left;
-    font-size: 11px;
-    font-family: PingFang SC;
-    font-weight: 500;
-    color: rgba(62, 66, 68, 1);
-    margin-left: 36px
-}
-
-.add {
-    text-align: left;
-    margin-left: 36px;
-    margin-top:15px;
-    >span {
-        font-size: 9px;
-        font-family: PingFang SC;
-        font-weight: 400;
-        color: rgba(86, 86, 86, 1);
-    }
-
-    >input {
-        width: 171px;
-        height: 24px;
-        background: rgba(255, 255, 255, 1);
-        border: 1px solid rgba(238, 238, 238, 1);
-        margin-right:14px;
-        padding-left: 10px;
-        
-    }
-}
-.ant-btn{
-    height:24px
-}
-.ant-input-affix-wrapper{
-    float:right;
-    margin-right:36px!important  
-}
-.ant-input{
-    height:24px!important;
-}
-
 .ant-menu-sub.ant-menu-inline > .ant-menu-item{
     font-size:10px
 
@@ -154,19 +112,7 @@
 .ant-menu-submenu-title{
     padding-left:10px!important
 }
-.ant-table table{
-    margin-top:20px
-}
 
-.ant-table-thead > tr:first-child>th {
-    background:rgba(235,241,244,1)!important
-}
-.ant-table-tbody > tr:nth-child(odd){
-    background:rgba(255,255,255,1)
-}
-.ant-table-tbody > tr:nth-child(even){
-    background:rgba(240,250,255,1);
-}
 .ant-menu{
     background:none!important;
     color:white
@@ -185,4 +131,7 @@
 }
 .ant-menu-inline, .ant-menu-vertical, .ant-menu-vertical-left{
     border-right: none;
+}
+.ant-menu-item > a{
+    color:white
 }

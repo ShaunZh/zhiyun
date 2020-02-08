@@ -1,8 +1,8 @@
 import * as React from 'react'
 import './index.scss'
 import Admin from '../admin'
-import { Breadcrumb, Button, Input, Table, Divider, Tag, Menu, Icon } from 'antd'
-import { HashRouter, Switch, Redirect, Route,Link } from 'react-router-dom'
+import { Breadcrumb, Menu} from 'antd'
+import {  Route, Link } from 'react-router-dom'
 
 import classIcon from '@/assets/images/icon-class1.png'
 import staffIcon from '@/assets/images/icon-staff1.png'
@@ -15,7 +15,6 @@ const { SubMenu } = Menu
 
 // import styled from 'styled-components'
 // import px2rem from '@/utils/px2rem'
-const { Search } = Input
 
 export default class SideMenu extends React.Component<{}, {}> {
   handleClick = () => {
@@ -27,7 +26,7 @@ export default class SideMenu extends React.Component<{}, {}> {
         <div className="topBox">
           <div className="topLeft">
             <div className="logoBox">
-              <img src={logo} className="logo"></img>
+              <img src={logo} alt="" className="logo"></img>
             </div>
           </div>
           <div className="topRight">
@@ -39,11 +38,11 @@ export default class SideMenu extends React.Component<{}, {}> {
             </div>
             <div className="breadRight">
               <div className="avator">
-                <img src={avator}></img>
+                <img src={avator} alt=""></img>
               </div>
               <span>admin</span>
               <div className="logout">
-                <img src={logout}></img>
+                <img src={logout} alt=""></img>
               </div>
             </div>
           </div>
@@ -61,12 +60,14 @@ export default class SideMenu extends React.Component<{}, {}> {
                 key="sub1"
                 title={
                   <span>
-                    <img src={statisticsIcon} className="icon"></img>
+                    <img src={statisticsIcon} className="icon" alt=""></img>
                     <span>系统管理</span>
                   </span>
                 }
               >
-                <Menu.Item><Link to="/sidemenu/admin">操作员管理</Link></Menu.Item>
+                <Menu.Item>
+                  <Link to="/sidemenu/admin">操作员管理</Link>
+                </Menu.Item>
                 <Menu.Item>角色管理</Menu.Item>
                 <Menu.Item>系统消息</Menu.Item>
                 <Menu.Item>反馈管理</Menu.Item>
@@ -75,7 +76,7 @@ export default class SideMenu extends React.Component<{}, {}> {
                 key="sub2"
                 title={
                   <span>
-                    <img src={classIcon} className="icon"></img>
+                    <img src={classIcon} className="icon" alt=""></img>
                     <span>课程管理</span>
                   </span>
                 }
@@ -87,7 +88,7 @@ export default class SideMenu extends React.Component<{}, {}> {
                 key="sub3"
                 title={
                   <span>
-                    <img src={staffIcon} className="icon"></img>
+                    <img src={staffIcon} className="icon" alt=""></img>
                     <span>人员管理</span>
                   </span>
                 }
@@ -101,7 +102,7 @@ export default class SideMenu extends React.Component<{}, {}> {
                 key="sub4"
                 title={
                   <span>
-                    <img src={platformIcon} className="icon"></img>
+                    <img src={platformIcon} className="icon" alt=""></img>
                     <span>平台管理</span>
                   </span>
                 }
@@ -115,7 +116,7 @@ export default class SideMenu extends React.Component<{}, {}> {
                 key="sub5"
                 title={
                   <span>
-                    <img src={statisticsIcon} className="icon"></img>
+                    <img src={statisticsIcon} className="icon" alt=""></img>
                     <span>统计分析</span>
                   </span>
                 }
@@ -128,19 +129,9 @@ export default class SideMenu extends React.Component<{}, {}> {
             </Menu>
           </div>
           <div className="bottomRight">
-            <div className="title">操作管理员</div>
-            <div className="add">
-              <span>状态：</span>
-              <input placeholder="全部"></input>
-              <Button type="primary">新增操作员</Button>
-              <Search placeholder="输入搜索内容" style={{ width: 200 }} />
-              {/* <Redirect from="/sidemenu" to="/sidemenu/admin" exact> */}
-              <Route path="/sidemenu/admin">
-                <Admin></Admin>
-              </Route>
-              <Route path="/sidemenu/role">123456</Route>
-              {/* </Redirect> */}
-            </div>
+            <Route path="/sidemenu/admin">
+              <Admin></Admin>
+            </Route>
           </div>
         </div>
       </div>

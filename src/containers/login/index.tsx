@@ -14,14 +14,14 @@ class Login extends React.Component<{}, {}> {
     return (
       <div className="pageBox">
         <LogoImg>
-          <img src={loginPageLogo} className="logo"></img>
+          <img src={loginPageLogo} alt="" className="logo"></img>
         </LogoImg>
 
         <LeftBox>
-          <img src={leftBG} className="leftBG"></img>
+          <img src={leftBG} alt="" className="leftBG"></img>
         </LeftBox>
         <InputAreas>
-          <div className="title">用户登录</div>
+          <div className="title1">用户登录</div>
           <input className="input inputone" placeholder="请输入账号"></input>
           <input className="input inputtwo" placeholder="请输入登录密码"></input>
           <Button type="primary" block>
