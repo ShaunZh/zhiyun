@@ -1,0 +1,16 @@
+
+.ant-modal-body input,select,textarea {
+    position:absolute;
+    left:65px;
+    width: 228px;
+    height: 24px;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(229, 229, 229, 1);
+    border-radius: 1px;
+}
+textarea{
+    height:80px
+}
+.ant-modal-body{
+    height:180px
+}

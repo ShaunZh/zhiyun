@@ -5,13 +5,14 @@
     font-weight: 500;
     color: rgba(62, 66, 68, 1);
     margin-left: 36px;
-    margin-top:15px
+    margin-top: 15px
 }
 
 .add {
     text-align: left;
     margin-left: 36px;
-    margin-top:15px;
+    margin-top: 15px;
+
     >span {
         font-size: 9px;
         font-family: PingFang SC;
@@ -24,35 +25,76 @@
         height: 24px;
         background: rgba(255, 255, 255, 1);
         border: 1px solid rgba(238, 238, 238, 1);
-        margin-right:14px;
+        margin-right: 14px;
         padding-left: 10px;
-        
+
     }
 }
-.ant-btn{
-    height:24px
-}
-.ant-input-affix-wrapper{
-    float:right;
-    margin-right:36px!important  
-}
-.ant-input{
-    height:24px!important;
-}
-.ant-table table{
-    margin-top:20px;
-    margin-bottom:50px
+
+.ant-btn {
+    height: 24px
 }
 
-.ant-table-thead > tr:first-child>th {
-    background:rgba(235,241,244,1)!important
+.ant-input-affix-wrapper {
+    float: right;
+    margin-right: 36px !important
 }
-.ant-table-tbody > tr:nth-child(odd){
-    background:rgba(255,255,255,1)
+
+.ant-input {
+    height: 24px !important;
 }
-.ant-table-tbody > tr:nth-child(even){
-    background:rgba(240,250,255,1);
+
+.ant-table table {
+    margin-top: 20px;
+    margin-bottom: 50px
 }
-.ant-spin-nested-loading{
-    margin:0 36px
+
+.ant-table-thead>tr:first-child>th {
+    background: rgba(235, 241, 244, 1) !important
+}
+
+.ant-table-tbody>tr:nth-child(odd) {
+    background: rgba(255, 255, 255, 1)
+}
+
+.ant-table-tbody>tr:nth-child(even) {
+    background: rgba(240, 250, 255, 1);
+}
+
+.ant-spin-nested-loading {
+    margin: 0 36px
+}
+.ant-modal-body>div{
+    position:relative;
+    margin-bottom:22px
+}
+.ant-modal-body input,select {
+    position:absolute;
+    left:65px;
+    width: 228px;
+    height: 24px;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(229, 229, 229, 1);
+    border-radius: 1px;
+}
+.breadRight {
+    position: absolute;
+    right: 36px;
+    top: 10px;
+
+    >span {
+        display: inline-block;
+        margin: 10px;
+        font-size: 13px;
+        font-family: Microsoft YaHei;
+        font-weight: 400;
+        color: rgba(38, 38, 38, 1);
+        line-height: 21px
+    }
+}
+.ant-breadcrumb >span>a{
+    color:rgba(44,166,224,1)!important
+}
+.ant-modal-body{
+    height:200px!important
 }
