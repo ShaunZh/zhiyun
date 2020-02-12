@@ -3,7 +3,8 @@ import { createHashHistory } from 'history'
 import './index.scss'
 import Admin from '../admin'
 import Systeminfo from '../synsteminfo'
-import { Menu} from 'antd'
+import Financial from '../financial'
+import { Menu } from 'antd'
 import { Route } from 'react-router-dom'
 
 import classIcon from '@/assets/images/icon-class1.png'
@@ -89,7 +90,7 @@ export default class SideMenu extends React.Component<{}, {}> {
                   </span>
                 }
               >
-                <SubMenu key="sub3" title="用户信息管理" className="secondsubmenu">
+                <SubMenu key="sub7" title="用户信息管理" className="secondsubmenu">
                   <Menu.Item key="9">云盘信息管理</Menu.Item>
                 </SubMenu>
               </SubMenu>
@@ -115,7 +116,14 @@ export default class SideMenu extends React.Component<{}, {}> {
                   </span>
                 }
               >
-                <Menu.Item key="31">财务统计</Menu.Item>
+                <Menu.Item
+                  key="31"
+                  onClick={() => {
+                    createHashHistory().push('/sidemenu/financial')
+                  }}
+                >
+                  财务统计
+                </Menu.Item>
                 <Menu.Item key="32">用户统计</Menu.Item>
                 <Menu.Item key="33">课程统计</Menu.Item>
                 <Menu.Item key="34">存储统计</Menu.Item>
@@ -128,6 +136,9 @@ export default class SideMenu extends React.Component<{}, {}> {
             </Route>
             <Route path="/sidemenu/systeminfo">
               <Systeminfo></Systeminfo>
+            </Route>
+            <Route path="/sidemenu/financial">
+              <Financial></Financial>
             </Route>
           </div>
         </div>
