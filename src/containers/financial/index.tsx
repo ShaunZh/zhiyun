@@ -50,8 +50,8 @@ export default class Financial extends React.Component<{}, {}> {
         <div className="topRight">
           <div className="breadLeft">
             <Breadcrumb separator=">">
-              <Breadcrumb.Item>系统管理</Breadcrumb.Item>
-              <Breadcrumb.Item href="">操作管理员</Breadcrumb.Item>
+              <Breadcrumb.Item>统计分析</Breadcrumb.Item>
+              <Breadcrumb.Item href="">财务统计</Breadcrumb.Item>
             </Breadcrumb>
           </div>
         </div>

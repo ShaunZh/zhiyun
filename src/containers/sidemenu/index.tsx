@@ -4,6 +4,8 @@ import './index.scss'
 import Admin from '../admin'
 import Systeminfo from '../synsteminfo'
 import Financial from '../financial'
+import Storage from '../storage'
+import Users from '../users'
 import { Menu } from 'antd'
 import { Route } from 'react-router-dom'
 
@@ -124,9 +126,23 @@ export default class SideMenu extends React.Component<{}, {}> {
                 >
                   财务统计
                 </Menu.Item>
-                <Menu.Item key="32">用户统计</Menu.Item>
+                <Menu.Item
+                  key="32"
+                  onClick={() => {
+                    createHashHistory().push('/sidemenu/users')
+                  }}
+                >
+                  用户统计
+                </Menu.Item>
                 <Menu.Item key="33">课程统计</Menu.Item>
-                <Menu.Item key="34">存储统计</Menu.Item>
+                <Menu.Item
+                  key="34"
+                  onClick={() => {
+                    createHashHistory().push('/sidemenu/storage')
+                  }}
+                >
+                  存储统计
+                </Menu.Item>
               </SubMenu>
             </Menu>
           </div>
@@ -139,6 +155,12 @@ export default class SideMenu extends React.Component<{}, {}> {
             </Route>
             <Route path="/sidemenu/financial">
               <Financial></Financial>
+            </Route>
+            <Route path="/sidemenu/users">
+              <Users></Users>
+            </Route>
+            <Route path="/sidemenu/storage">
+              <Storage></Storage>
             </Route>
           </div>
         </div>

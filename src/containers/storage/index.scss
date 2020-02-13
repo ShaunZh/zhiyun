@@ -1,0 +1,47 @@
+.title2 {
+    font-size: 16px;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: rgba(62, 66, 68, 1);
+    margin: 20px 50px;
+    text-align: left
+}
+
+.sbox {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 50px
+}
+
+.rbox,
+.lbox {
+    width: 48%;
+    background-color: white;
+}
+
+.nbox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nsbox {
+    text-align: center;
+    width:33% ;
+    span {
+        font-size: 30px;
+        font-family: PingFang SC;
+        font-weight: 500;
+        color: rgba(62, 66, 68, 1)
+    }
+}
+.r1box{
+    padding:10px 20px;
+    border-bottom: 1px solid #fff;
+    .ant-btn{
+        float:right
+    }
+}
+#main{
+    padding:20px
+}
